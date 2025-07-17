@@ -1,0 +1,7 @@
+.previewSection {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: #eeeded;
+    height: 100vh;
+    overflow-y: scroll;
+}

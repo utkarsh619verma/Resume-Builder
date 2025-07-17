@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(233, 230, 230);
+    padding: 0 1rem;
+}
+
+.profileImage {
+    width: 20px;
+    height: 20px;
+}

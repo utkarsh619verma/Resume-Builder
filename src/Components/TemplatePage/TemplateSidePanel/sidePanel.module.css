@@ -1,0 +1,33 @@
+.sidePanel {
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: calc(5px + 1.5625vw);
+    cursor: pointer;
+    font-size: 1rem;
+    border-bottom: 1px solid #c4bdbd;
+}
+
+.template:hover {
+    background-color: #e5e4e4;
+}
+
+.templateImage {
+    width: 60%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.sidePanelHeading {
+    background-color: #ffffff;
+    margin: 0;
+    text-align: center;
+    padding: calc(5px + 1.5625vw);
+    color: blueviolet;
+}

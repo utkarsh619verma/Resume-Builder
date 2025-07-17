@@ -1,0 +1,94 @@
+.intro {
+    height: 100vh;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1637825891028-564f672aa42c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+
+}
+
+.intro>img {
+    width: 40%;
+    transform: rotate(-18deg);
+    position: relative;
+    top: 13%;
+    left: 5%
+}
+
+.intro-content {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+}
+
+.intro-content>h1 {
+    font-size: 5.4rem;
+}
+
+@media (min-width:1500px) {
+    .intro-content>h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width:1700px) {
+    .intro-content>h1 {
+        font-size: 7rem;
+    }
+}
+
+.arrow-left {
+    background-color: white;
+    height: 40px;
+    width: 5px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    animation: glowingArrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.arrow-right {
+    background-color: white;
+    height: 40px;
+    width: 5px;
+    transform: rotate(45deg);
+    display: inline-block;
+    translate: 20px 0px;
+    animation: glowingArrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glowingArrow {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0px 0px 20px 5px white;
+
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.first-arrow {
+    translate: 0px 20px;
+    animation: glowingArrow;
+}
+
+.second-arrow {
+    translate: 0px 0px;
+    animation: glowingArrow;
+}
+
+.third-arrow {
+    translate: 0px -20px;
+    animation: glowingArrow;
+}
