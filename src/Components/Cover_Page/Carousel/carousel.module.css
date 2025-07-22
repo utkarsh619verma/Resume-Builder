@@ -1,6 +1,6 @@
 .middleContainer {
     overflow-y: hidden;
-    height: 97vh
+    height: 100vh;
 }
 
 
@@ -54,6 +54,10 @@ h2 {
 }
 
 @media (max-width:700px) {
+    .middleContainer {
+        height: auto;
+    }
+
     .active {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
