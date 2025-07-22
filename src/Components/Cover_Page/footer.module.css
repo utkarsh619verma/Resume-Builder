@@ -4,12 +4,12 @@
 }
 
 .getStartedButton {
-    font-size: 1.5rem;
+    font-size: clamp(1.6rem, 1.329vw + 1rem, 3rem);
     font-weight: 800;
     background-color: white;
     border: none;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 2rem;
     color: blueviolet;
     display: block;
     margin: calc(8px + 1.5625vw) auto;

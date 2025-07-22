@@ -19,31 +19,21 @@ export default function Intro() {
             Choose a template, add your details, and download your resume—no
             design skills needed.
           </p>
-        </div>
-        <div
-          style={{
-            margin: "0",
-            position: "absolute",
-            bottom: "2%",
-            textAlign: "center",
-            right: "23%",
-            fontSize: "1.8rem",
-            fontWeight: "900",
-          }}
-        >
-          SEE MORE
-          <div>
-            <div className="first-arrow">
-              <span className="arrow-left"></span>
-              <span className="arrow-right"></span>
-            </div>
-            <div className="second-arrow">
-              <span className="arrow-left"></span>
-              <span className="arrow-right"></span>
-            </div>
-            <div className="third-arrow">
-              <span className="arrow-left"></span>
-              <span className="arrow-right"></span>
+          <div className="seeMoreButton">
+            <p style={{ textAlign: "center" }}>SEE MORE</p>
+            <div style={{ textAlign: "center" }}>
+              <div className="first-arrow">
+                <span className="arrow-left"></span>
+                <span className="arrow-right"></span>
+              </div>
+              <div className="second-arrow">
+                <span className="arrow-left"></span>
+                <span className="arrow-right"></span>
+              </div>
+              <div className="third-arrow">
+                <span className="arrow-left"></span>
+                <span className="arrow-right"></span>
+              </div>
             </div>
           </div>
         </div>
