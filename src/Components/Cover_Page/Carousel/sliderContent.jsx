@@ -2,7 +2,7 @@ import styles from "./carousel.module.css";
 
 export default function SliderContent({ activeIndex, sliderImage }) {
   return (
-    <section>
+    <section style={{ height: "100%" }}>
       {sliderImage.map((slide, index) => {
         return (
           <div

@@ -1,7 +1,8 @@
 .middleContainer {
-    overflow-x: hidden;
+    overflow-y: hidden;
     height: 97vh
 }
+
 
 .inactive {
     display: none;
@@ -9,9 +10,10 @@
 }
 
 .active {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
     align-items: center;
-    gap: 9%;
     padding: 0px calc(8px + 1.5625vw);
     animation-name: slideIn;
     animation-duration: 1s;
@@ -37,15 +39,37 @@
 }
 
 .sliderContainer {
+    height: 100%;
     padding: calc(8px + 1.5625vw);
 }
 
 .slideImage {
-    width: 30%;
+    width: clamp(30%, 30vw, 70%);
     padding: 0 calc(8px + 1.5625vw);
 }
 
 h2 {
     color: blueviolet;
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 2.619vw + 1rem, 4rem);
+}
+
+@media (max-width:700px) {
+    .active {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .active>img,
+    div {
+        margin: auto;
+    }
+
+    .active h2,
+    h3 {
+        text-align: center;
+    }
+
+    .slideImage {
+        width: 70%;
+    }
 }
