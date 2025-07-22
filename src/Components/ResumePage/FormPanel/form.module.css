@@ -1,0 +1,94 @@
+input {
+    width: 90%;
+    height: 3.4rem;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+}
+
+.formContainer {
+    font-weight: 300;
+    font-family: sans-serif;
+    margin: 4rem 3rem;
+}
+
+.formContainer input:focus {
+    outline: 1px solid #b4b4b4;
+}
+
+.formContainer input:focus+.borderSpan {
+    width: 90%;
+}
+
+
+.introHeading {
+    color: rgb(85, 27, 139);
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.introPara {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.parallelFields {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.span {
+    display: block;
+}
+
+.borderSpan {
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: 0px;
+    left: 0px;
+    background-color: blueviolet;
+    transition: width 0.4s ease-in-out;
+}
+
+
+.formGrid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 2rem;
+}
+
+.namefield,
+.contactfield {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.locationfield {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.6fr;
+}
+
+.fieldContainer {
+    position: relative;
+}
+
+.saveButton {
+    background-color: rgb(85, 27, 139);
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    border: none;
+    padding: 1rem 2rem;
+    width: max-content;
+    margin: 0 auto;
+}

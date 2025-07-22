@@ -1,6 +1,6 @@
 .resumePage {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 10% 50% 40%;
     height: 100vh;
 }
 

@@ -1,12 +1,14 @@
+import PersonalForm from "./FormPanel/personalForm";
 import styles from "./resumePage.module.css";
+import ResumePanel from "./ResumePanel/resumePanel";
+import SidePanel from "./SidePanel/sidePanel";
 
 export default function ResumePage() {
   return (
     <div className={styles.resumePage}>
-      <div className={styles.formPanel}>
-        <h1 className={styles.formHeading}>Fill your Details</h1>
-      </div>
-      <div className={styles.resumePanel}></div>
+      <SidePanel />
+      <PersonalForm />
+      <ResumePanel />
     </div>
   );
 }
