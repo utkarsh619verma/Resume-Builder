@@ -107,20 +107,25 @@ const MenuBar = ({ editor }) => {
       >
         Add
       </button>
+      <button
+        type="button"
+        className="basicPurpleButton"
+        style={{ padding: "0.5rem 2rem", margin: "0rem 1rem" }}
+      >
+        AI Touch
+      </button>
     </div>
   );
 };
 
-export default function TextEditor() {
+export default function TextEditor({ placeholder }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
       TextAlign.configure({ types: ["heading", "paragraph"] }),
       Highlight,
       Placeholder.configure({
-        placeholder: `Explain what you worked on, your main responsibilities, and any key achievements.Focus on results and specific contributions rather than just listing tasks.
-        → Developed and optimized a web application, improving load speed by 30% and enhancing user experience.
-        `,
+        placeholder: placeholder,
       }),
     ],
   });

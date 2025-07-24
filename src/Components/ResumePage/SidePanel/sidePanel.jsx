@@ -77,7 +77,7 @@ export default function SidePanel({ setActiveForm }) {
         </li>
         <li
           onClick={() => {
-            setActiveForm("additional_details");
+            setActiveForm("summary");
           }}
         >
           <img
@@ -85,7 +85,7 @@ export default function SidePanel({ setActiveForm }) {
             src="../FormSidePanel/icons8-more-details-50.png"
             alt=""
           />
-          <p className={styles.fieldName}>Additional Details</p>
+          <p className={styles.fieldName}>Summary</p>
         </li>
       </ul>
     </div>

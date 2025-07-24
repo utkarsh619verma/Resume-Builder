@@ -5,6 +5,10 @@ import styles from "./resumePage.module.css";
 import ResumePanel from "./ResumePanel/resumePanel";
 import SidePanel from "./SidePanel/sidePanel";
 import ExperienceForm from "./FormPanel/experienceForm";
+import SkillsForm from "./FormPanel/skillsForm";
+import ProjectsForm from "./FormPanel/projectsForm";
+import SummaryForm from "./FormPanel/summaryForm";
+import AchievementsForm from "./FormPanel/achievementForm";
 
 export default function ResumePage() {
   const [activeForm, setActiveForm] = useState("personal");
@@ -12,6 +16,10 @@ export default function ResumePage() {
     personal: <PersonalForm />,
     educational: <EducationForm />,
     experience: <ExperienceForm />,
+    skills: <SkillsForm />,
+    projects: <ProjectsForm />,
+    summary: <SummaryForm />,
+    achievements: <AchievementsForm />,
   };
   return (
     <div className={styles.resumePage}>

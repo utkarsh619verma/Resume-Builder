@@ -51,7 +51,9 @@ export default function ExperienceForm() {
           <label className={standardFormStyles.label} htmlFor="job_description">
             Job Description
           </label>
-          <TextEditor />
+          <TextEditor
+            placeholder={`Explain what you worked on, your main responsibilities, and any key achievements.Focus on results and specific contributions rather than just listing tasks.→ Developed and optimized a web application, improving load speed by 30% and enhancing user experience.`}
+          />
         </div>
         <div className={standardFormStyles.twoColumnGridField}>
           <div className={standardFormStyles.fieldContainer}>

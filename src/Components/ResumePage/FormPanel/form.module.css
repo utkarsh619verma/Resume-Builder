@@ -130,6 +130,64 @@ select:focus {
     padding: 2rem;
 }
 
+.suggestedSkillsBox {
+    max-height: 20rem;
+    overflow-y: scroll;
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.skillsPill {
+    background-color: rgb(195 189 201);
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 2.6rem;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.skillsPill:hover {
+    background-color: rgb(85, 27, 139);
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.yourSkillsBox {
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+
+.yourSkillsBox li {
+    font-size: 1.8rem;
+    border-radius: 2.6rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
+}
+
+.yourSkillsBox li>span {
+    margin-right: 1.5rem;
+}
+
+.skillRemoveButton {
+    display: none;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+}
+
+.yourSkillsBox li:hover {
+    background-color: rgb(195 189 201);
+}
+
+.yourSkillsBox li:hover>.skillRemoveButton {
+    display: inline;
+}
+
 .addButton {
     height: max-content;
     position: relative;
