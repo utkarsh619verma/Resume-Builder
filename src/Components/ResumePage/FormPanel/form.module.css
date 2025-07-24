@@ -1,9 +1,32 @@
-input {
+input,
+select,
+textarea {
     width: 90%;
     height: 3.4rem;
     border: 1px solid #b4b4b4;
     border-radius: 0.3rem;
     box-sizing: border-box;
+    padding: 0.5rem 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea {
+    width: 95%;
+    resize: none;
+    height: 20rem;
+}
+
+.examplePara {
+    color: #868686;
+    font-size: 1.1rem;
+    font-weight: 700;
+    grid-column: 1/4;
+    text-align: center;
 }
 
 .formContainer {
@@ -12,7 +35,8 @@ input {
     margin: 4rem 3rem;
 }
 
-.formContainer input:focus {
+.formContainer input:focus,
+select:focus {
     outline: 1px solid #b4b4b4;
 }
 
@@ -24,12 +48,12 @@ input {
 .introHeading {
     color: rgb(85, 27, 139);
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
     margin: 0;
 }
 
 .introPara {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
@@ -56,36 +80,69 @@ input {
     bottom: 0px;
     left: 0px;
     background-color: blueviolet;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 
 
 .formGrid {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     row-gap: 2rem;
 }
 
-.namefield,
+.twoColumnGridField {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.threeColumnGridField {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+}
+
+/* .namefield,
 .contactfield {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+
 .locationfield {
     display: grid;
-    grid-template-columns: 1fr 0.4fr 0.6fr;
-}
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+} */
 
 .fieldContainer {
     position: relative;
 }
 
+.moreDetailsHeading {
+    color: rgb(85, 27, 139);
+}
+
+.moreDetailsHeading:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.additionalDetailsSection {
+    border: 1px solid #b4b4b4;
+    border-radius: 0.3rem;
+    padding: 2rem;
+}
+
+.addButton {
+    height: max-content;
+    position: relative;
+    top: 40%;
+    width: max-content;
+    padding: 1rem 3rem;
+}
+
 .saveButton {
     background-color: rgb(85, 27, 139);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 0.4rem;
     border: none;
     padding: 1rem 2rem;
