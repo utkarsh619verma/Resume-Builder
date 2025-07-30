@@ -3,9 +3,8 @@ import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import React from "react";
 import Placeholder from "@tiptap/extension-placeholder";
-
+import { useEffect } from "react";
 import {
   Bold,
   Italic,
@@ -100,13 +99,13 @@ const MenuBar = ({ editor }) => {
         () => editor.chain().focus().setTextAlign("justify").run(),
         editor.isActive({ textAlign: "justify" })
       )}
-      <button
+      {/* <button
         type="button"
         className="basicPurpleButton"
         style={{ padding: "0.5rem 2rem", margin: "0rem 1rem" }}
       >
         Add
-      </button>
+      </button> */}
       <button
         type="button"
         className="basicPurpleButton"
@@ -118,7 +117,7 @@ const MenuBar = ({ editor }) => {
   );
 };
 
-export default function TextEditor({ placeholder }) {
+export default function TextEditor({ value, setValue, placeholder }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -128,7 +127,17 @@ export default function TextEditor({ placeholder }) {
         placeholder: placeholder,
       }),
     ],
+    content: value,
+    onUpdate({ editor }) {
+      setValue(editor.getText());
+    },
   });
+
+  useEffect(() => {
+    if (editor && value) {
+      editor.commands.setContent(value);
+    }
+  }, [editor, value]);
 
   return (
     <div className={textEditorStyles.editorWrapper}>

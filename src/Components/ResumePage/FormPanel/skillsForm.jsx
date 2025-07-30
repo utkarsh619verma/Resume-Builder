@@ -1,7 +1,26 @@
 import classNames from "classnames";
 import standardFormStyles from "./form.module.css";
 
+//IMPORTING REDUX RELATED STUFF
+import { newSkill, addSkill } from "../../../features/skillsSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function SkillsForm() {
+  const dispatch = useDispatch();
+  const { allSkills, currentSkill } = useSelector((state) => state.skills);
+  const handleSkillsSlice = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "skills": {
+        dispatch(newSkill(value));
+        break;
+      }
+      default: {
+        const newskill = currentSkill;
+        dispatch(addSkill(newskill));
+      }
+    }
+  };
   const suggestedSkillsArray = [
     "JavaScript",
     "React",
@@ -67,6 +86,8 @@ export default function SkillsForm() {
             <input
               placeholder="Add your skills"
               name="skills"
+              value={currentSkill}
+              onChange={(e) => handleSkillsSlice(e)}
               id="skills"
               type="text"
             />
@@ -78,6 +99,7 @@ export default function SkillsForm() {
               "basicPurpleButton"
             )}
             type="button"
+            onClick={handleSkillsSlice}
           >
             Add
           </button>
@@ -109,7 +131,7 @@ export default function SkillsForm() {
                 fontSize: "1.6rem",
               }}
             >
-              Your skills: {userSkills.length}
+              Your skills: {allSkills.length}
             </p>{" "}
             <div className={standardFormStyles.yourSkillsBox}>
               <ul>

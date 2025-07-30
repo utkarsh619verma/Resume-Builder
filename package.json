@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "@tiptap/extension-color": "^3.0.7",
     "@tiptap/extension-highlight": "^3.0.7",
     "@tiptap/extension-placeholder": "^3.0.7",
@@ -22,7 +23,10 @@
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.0"
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.7.0",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

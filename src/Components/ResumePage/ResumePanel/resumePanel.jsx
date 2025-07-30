@@ -1,7 +1,9 @@
+import CleanCorporate from "./Templates/Clean_Corporate_Template/cleanCorporate";
+
 export default function ResumePanel() {
   return (
     <div>
-      <div>RESUME</div>
+      <CleanCorporate />
     </div>
   );
 }

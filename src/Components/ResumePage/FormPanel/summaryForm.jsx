@@ -2,7 +2,13 @@ import classNames from "classnames";
 import standardFormStyles from "./form.module.css";
 import TextEditor from "./textEditor";
 
+//IMPORTING REDUX RELATED STUFF
+import { setSummary } from "../../../features/summary";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function SummaryForm() {
+  const dispatch = useDispatch();
+  const { summary } = useSelector((state) => state.summary);
   return (
     <div className={standardFormStyles.formContainer}>
       <h2 className={standardFormStyles.introHeading}>
@@ -22,6 +28,9 @@ export default function SummaryForm() {
             placeholder={
               "A concise 2-3 line overview of your skills, experience, and career goals. Example: 'Experienced frontend developer skilled in React and JavaScript, passionate about building user-friendly web applications'"
             }
+            value={summary}
+            setValue={(val) => dispatch(setSummary(val))}
+            name="summary"
           />
         </div>
         <button
@@ -31,7 +40,7 @@ export default function SummaryForm() {
           )}
           type="button"
         >
-          Save Details
+          Preview Resume
         </button>{" "}
       </form>
     </div>
